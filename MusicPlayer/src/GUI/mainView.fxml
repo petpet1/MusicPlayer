@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+
+<GridPane hgap="10" styleClass="root" vgap="10" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUIControllers.MainViewController">
+    
+    <padding> 
+        <Insets bottom="10" left="10" right="10" top="10" />
+    </padding>
+   <children>     
+            <Text id="welcome-text" text="Welcome to Ploggify" GridPane.columnIndex="0" 
+                  GridPane.rowIndex="0"  GridPane.columnSpan="2" />
+            
+            <Button onAction="#handleRadioGeneratorButton" prefWidth="120.0" text="Radio Generator" 
+                    GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+
+            <Button onAction="#handleAccountManagerButton" prefWidth="120.0" text="Track Player" 
+                    GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+
+            <Button onAction="#handleAccountManagerButton" prefWidth="120.0" text="Account Manager" 
+                    GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+
+            <Button onAction="#handlePlaylistButton" prefWidth="120.0" text="Playlists" 
+                    GridPane.columnIndex="0" GridPane.rowIndex="5"/>
+
+            <Button onAction="#handleSocialManagerButton" prefWidth="120.0" text="Social Manager" 
+                    GridPane.columnIndex="0" GridPane.rowIndex="6"/>
+            
+            <Text fx:id="songName" layoutX="14.0" layoutY="45.0" 
+                  GridPane.columnIndex="0" GridPane.rowIndex="8" wrappingWidth="109.0" />
+            <Text fx:id="artisName" layoutX="14.0" layoutY="45.0" 
+                  GridPane.columnIndex="0" GridPane.rowIndex="9" wrappingWidth="109.0" />
+   
+  
+      <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <children>
+             <GridPane fx:id="targetPane" 
+                xmlns:fx="http://javafx.com/fxml" 
+                alignment="center" hgap="10" vgap="10" styleClass="root"  />
+             <Text fx:id="actiontarget" layoutX="14.0" layoutY="45.0" wrappingWidth="109.0" />
+         </children>
+      </Pane>
+   </children>               
+          <stylesheets>
+              <URL value="@Login.css" />
+          </stylesheets>
+</GridPane>

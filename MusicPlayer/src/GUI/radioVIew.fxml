@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+
+
+<GridPane fx:controller="GUIControllers.RadioViewController" 
+          xmlns:fx="http://javafx.com/fxml" 
+          alignment="center" hgap="10" vgap="10" styleClass="root">
+    
+    <padding> 
+        <Insets top="10" right="10" bottom="10" left="10"/>
+    </padding>
+
+    <Text id="welcome-text" 
+          text = "Radio Generator" 
+          GridPane.columnIndex="0" 
+          GridPane.rowIndex="0"
+          GridPane.columnSpan="2"/> 
+
+    <TextField fx:id="searchText"
+               GridPane.columnIndex="1" 
+               GridPane.rowIndex="1"
+               onKeyPressed="#handleEnterPressed" 
+               promptText="Enter artist here"    />
+
+    <Button text = "Generate Song Radio:"
+           onAction="#handleGenerateButton" 
+           GridPane.columnIndex="2" 
+           GridPane.rowIndex="1"/>
+    
+    <TableView fx:id="songTable"  
+               prefHeight="350.0" prefWidth="650.0" GridPane.columnIndex="0" 
+               GridPane.rowIndex="4" GridPane.columnSpan="4"   >
+        <columns>
+            <TableColumn fx:id="name" minWidth="80.0" prefWidth="200.0" text="Name" />
+            <TableColumn fx:id="artist" minWidth="80.0" prefWidth="150.0" text="Artist" />
+            <TableColumn fx:id="genre" minWidth="40.0" prefWidth="100.0" text="Genre" />
+            <TableColumn fx:id="lenght" minWidth="20.0" prefWidth="75.0" text="Length" />
+            <TableColumn fx:id="popularity" minWidth="50.0" prefWidth="100.0" text="Popularity" />
+        </columns>
+    </TableView>
+
+    <HBox spacing="10" alignment="bottom_right" 
+          GridPane.columnIndex="1" GridPane.rowIndex="6">
+        
+
+    </HBox>
+             
+          <stylesheets>
+              <URL value="@Login.css"/>
+          </stylesheets>
+</GridPane>
